@@ -1,6 +1,6 @@
 # Make Your Own Super Wallpaper
 
-Create stunning, customized Super Wallpapers by modifying Xiaomi's Super Wallpaper APK. This guide provides two methods to achieve fully customizable Super Wallpapers that work on any Android device.
+Create stunning, customized Super Wallpapers by modifying Xiaomi's Super Wallpaper APK and S24 Infinity Wallpaper by Andro Radar. This guide provides two methods to achieve fully customizable Super Wallpapers that work on any Android device.
 
 ## Table of Contents
 

@@ -55,15 +55,9 @@ For users comfortable with 3D asset modification, this method enables customizat
 ## Requirements
 
 ### Software
-- APKTool (latest version)
-- Java Development Kit (JDK)
-- Android device
-- Basic command-line knowledge
-
-### Hardware
-- Any Android device
-- Sufficient storage space for development
-- Minimum 4GB RAM recommended
+- APKTool (version 2.7.0 dirty or 2.10.0 dirty is recommend)
+- Android devices
+- Basic linux / windows command-line knowledge
 
 ## Troubleshooting
 
@@ -82,4 +76,4 @@ For complete license details, please refer to the [LICENSE](https://www.gnu.org/
 
 ---
 
-**Note**: Always backup your original APK files before modification. The author is not responsible for any device damage resulting from improper modification.
+**Note**: Always backup your original APK files before modification. The author is not responsible for any device damage resulting from improper modification. 

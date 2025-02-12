@@ -9,7 +9,6 @@ Create stunning, customized Super Wallpapers by modifying Xiaomi's Super Wallpap
   - [Option 1: Easy Method](#option-1-easy-method)
   - [Option 2: Advanced Method](#option-2-advanced-method)
 - [Requirements](#requirements)
-- [Detailed Instructions](#detailed-instructions)
 - [License](#license)
 
 ## Features

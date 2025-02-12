@@ -30,7 +30,7 @@ This beginner-friendly approach allows you to replace the built-in video inside 
    ```bash
    apktool d miside_super_wallpaper.apk -o miside_decompiled
    ```
-3. Navigate to the video file location in the decompiled folder
+3. Navigate to the video file location in the decompiled folder (assets folder)
 4. Replace with your custom MP4 video (maintain original filename)
 5. Recompile and sign:
    ```bash

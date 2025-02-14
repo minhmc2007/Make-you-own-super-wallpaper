@@ -95,7 +95,7 @@ echo "Extraction complete. PNGs saved in 'extracted_pngs' folder."
 ```bash
 toktx input.png -o output.ktx
 ```
-6. Follow the same recompilation and signing process as Option 1
+6. Follow the same recompilation and signing process as option 1
 7. Install and apply the modified wallpaper
 
 ## Requirements

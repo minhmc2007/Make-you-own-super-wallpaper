@@ -34,7 +34,7 @@ This beginner-friendly approach allows you to replace the built-in video inside 
 4. Replace with your custom MP4 video (maintain original filename)
 5. Recompile and sign:
    ```bash
-   apktool b miside_decompiled -o modified.apk
+   apktool b miside_decompiled -o modified.apk --aapt /usr/bin/aapt2
    java -jar signapk.jar certificate.pem key.pk8 modified.apk signed.apk
    ```
 6. Install and apply the modified wallpaper
@@ -48,9 +48,56 @@ For users comfortable with 3D asset modification, this method enables customizat
    ```bash
    apktool d moon_super_wallpaper.apk -o moon_decompiled
    ```
-3. Locate and modify texture files in the assets folder
-4. Follow the same recompilation and signing process as Option 1
-5. Install and apply the modified wallpaper
+3. Locate and modify texture files in the assets folder, inside texture-compressed and models (i only know how to edit texture, not models)
+4. You can use [ktx tool](https://github.com/KhronosGroup/KTX-Software) to extract and pack texture. To extract it use you can use this auto code to extract all ktx to png
+   '''bash
+
+#!/bin/bash
+
+# Check if required tools are installed
+if ! command -v ktx2ktx2 &> /dev/null || ! command -v ktx extract &> /dev/null; then
+    echo "Error: KTX-Software tools not found. Install them first."
+    exit 1
+fi
+
+# Create output folder
+mkdir -p extracted_pngs
+
+# Function to process a single KTX file
+convert_ktx_to_png() {
+    local file="$1"
+    local base_name="${file%.ktx}"  # Remove .ktx extension
+    
+    # Convert KTX1 to KTX2
+    echo "Converting $file to KTX2..."
+    ktx2ktx2 "$file"
+    
+    # Extract PNG from KTX2
+    if [ -f "$base_name.ktx2" ]; then
+        echo "Extracting PNG from $base_name.ktx2..."
+        ktx extract "$base_name.ktx2" --output "extracted_pngs/$base_name.png"
+        
+        # Remove intermediate KTX2 file to save space
+        rm "$base_name.ktx2"
+    else
+        echo "Error: KTX2 conversion failed for $file."
+    fi
+}
+
+export -f convert_ktx_to_png  # Export function for parallel execution
+
+# Find all .ktx files and process them in parallel
+find . -maxdepth 1 -type f -name "*.ktx" | parallel -j "$(nproc)" convert_ktx_to_png
+
+echo "Extraction complete. PNGs saved in 'extracted_pngs' folder."
+
+   '''
+6.To convert png to ktx 
+   '''bash
+toktx input.png -o output.ktx
+   '''
+6. Follow the same recompilation and signing process as Option 1
+7. Install and apply the modified wallpaper
 
 ## Requirements
 
@@ -58,15 +105,17 @@ For users comfortable with 3D asset modification, this method enables customizat
 - APKTool (version 2.7.0 dirty or 2.10.0 dirty is recommend)
 - Android devices
 - Basic linux / windows command-line knowledge
-
+-KTX Tool (option 2 only)
+-Java to sign apk
 ## Troubleshooting
 
 If you encounter issues:
 
 1. Verify all required tools are properly installed
-2. Double-check file permissions
-3. Ensure original filenames are preserved
-4. Validate texture file formats (for Option 2)
+2. Ensure original filenames are preserved
+3. Validate texture file formats (for Option 2)
+4. If the app fail to compile you can use my [Android Reverse Engineer Framework](https://github.com/Android-Reverse-Engineer-Framework) for patch the decompiled files
+5. Use aapt2 only
 
 ## License
 

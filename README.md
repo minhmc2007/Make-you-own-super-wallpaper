@@ -116,9 +116,7 @@ toktx input.png -o output.ktx
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0.
-
-For complete license details, please refer to the [LICENSE](https://www.gnu.org/licenses/gpl-3.0.html) file.
+This project is licensed under the MIT License
 
 ---
 

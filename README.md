@@ -111,7 +111,7 @@ toktx input.png -o output.ktx
 1. Verify all required tools are properly installed
 2. Ensure original filenames are preserved
 3. Validate texture file formats (for Option 2)
-4. If the app fails to compile, use [Android Reverse Engineer Framework](https://github.com/Android-Reverse-Engineer-Framework) to patch the decompiled files
+4. If the app fails to compile, use [Android Reverse Engineer Framework](https://github.com/minhmc2007/Android-Reverse-Engineer-Framework) to patch the decompiled files
 5. Use aapt2 only
 
 ## License

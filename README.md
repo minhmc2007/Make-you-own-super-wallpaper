@@ -2,6 +2,8 @@
 
 Create stunning, customized Super Wallpapers by modifying Xiaomi's Moon Super Wallpaper APK and S24 Infinity Wallpaper by Andro Radar. This guide provides two methods to achieve fully customizable Super Wallpapers that work on any Android device.
 
+## Special thank to imDCStar and Ouxyl 
+
 ## Table of Contents
 
 - [Features](#features)

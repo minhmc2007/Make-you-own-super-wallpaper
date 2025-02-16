@@ -41,6 +41,7 @@ apktool b miside_decompiled -o modified.apk --aapt2
 java -jar signapk.jar certificate.pem key.pk8 modified.apk signed.apk
 ```
 6. Install and apply the modified wallpaper
+7. The fist frame in your video will be your lockscreen and the rest of video will be home screen.
 
 ### Option 2: Advanced Method
 

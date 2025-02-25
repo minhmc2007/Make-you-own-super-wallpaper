@@ -28,7 +28,7 @@ Create stunning, customized Super Wallpapers by modifying Xiaomi's Moon Super Wa
 
 This beginner-friendly approach allows you to replace the built-in video inside Miside Super Wallpaper.
 
-1. Download the [Miside Super Wallpaper APK](https://objects.githubusercontent.com/github-production-release-asset-2e65be/916344626/ab5a8db1-9141-434a-84e0-794e34928dc1?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250212%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250212T143231Z&X-Amz-Expires=300&X-Amz-Signature=559860ccb6e40935aefee9e44230145af85805a0a14ccd917b5ca3987e635152&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dwallpaper.zip&response-content-type=application%2Foctet-stream)
+1. Download the [Miside Super Wallpaper APK](https://github.com/minhmc2007/Miside-Super-Wallpaper/releases/tag/V1.0.0-final)
 2. Decompile using APKTool:
 ```bash
 apktool d miside_super_wallpaper.apk -o miside_decompiled
